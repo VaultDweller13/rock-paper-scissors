@@ -1,5 +1,4 @@
 "use strict";
-const moves = ["rock", "paper", "scissors"];
 const buttons = document.querySelectorAll(".moves");
 let playerScore = 0;
 let computerScore = 0;
@@ -10,12 +9,17 @@ function playRound(e) {
   const playerSelection = this.value;
   const computerSelection = computerPlay();
   const resultField = document.querySelector('#result');
+  const playerSelectionField = document.querySelector('#player-move');
+  const computerSelectionField = document.querySelector('#computer-move');
+  const scoreField = document.querySelector('#score');
 
   let result = getResult(playerSelection, computerSelection);
+
+  playerSelectionField.textContent = `Your play: ${playerSelection}`;
+  computerSelectionField.textContent = `Opponent play: ${computerSelection}.`;
+  scoreField.textContent = `Player ${playerScore} : ${computerScore} Opponent`;
   
-  resultField.textContent = `Your play: ${playerSelection}; 
-                            Opponent play: ${computerSelection}. ${result}
-                            Player: ${playerScore} Opponent: ${computerScore}`;
+  resultField.textContent = `${result}`;
 
   if (playerScore >= 5) {
     resultField.textContent = resultField.textContent.concat(` Congratulations! You win ${playerScore} rounds!`)
@@ -27,6 +31,7 @@ function playRound(e) {
 }
 
 function computerPlay() {
+  const moves = ["rock", "paper", "scissors"];
   return moves[Math.floor(Math.random() * moves.length)];
 }
 

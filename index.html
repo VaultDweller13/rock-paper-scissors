@@ -2,12 +2,24 @@
 <html>
     <head>
         <script src="script.js" defer></script>
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
-        <button type="submit" class="moves" value="rock">ROCK</button>
-        <button type="submit" class='moves' value='scissors'>SCISSORS</button>
-        <button type="submit" class='moves' value='paper'>PAPER</button>
+        <div id='results-section'>
+            <div id="score">Player 0 : 0 Opponent</div>
+            <div id="moves">
+                <div id='player-move'>Player move</div>
+                <div id='computer-move'>Opponent move</div>
+            </div>
+            <div id='result'>Result</div>
+        </div>
 
-        <div id='result'>Result</div>
+        <div id="buttons">
+            <button type="submit" class="moves" value="rock">ROCK</button>
+            <button type="submit" class='moves' value='paper'>PAPER</button>
+            <button type="submit" class='moves' value='scissors'>SCISSORS</button>
+        </div>
+
+               
     </body>
 </html>

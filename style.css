@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+#score {
+  text-align: center;     
+}
+#moves {
+  display: flex;
+}
+
+#moves > div {
+  height: 300px;
+  text-align: center;
+  line-height: 300px;
+}
+
+#player-move{
+  flex: 1;
+}
+
+#computer-move{
+  flex: 1;
+}
+
+#result{
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+}
+
+#buttons > button {
+  flex: 1;
+  margin: 5px;
+}
